@@ -12,13 +12,14 @@ Color color;
     required this.onpress,
     required this.buttonText,
     required this.color,
-  }) : super(key: key);
+  }) : super(key: key);         
 
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(onPressed: onpress, child: Text(buttonText,style: TextStyle(fontSize: 15,color: Colors.black87),),
   
-    style: ElevatedButton.styleFrom(primary: color,shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5))));
+    style: ElevatedButton.styleFrom(backgroundColor: color,shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)))
+    );
   }
 }
